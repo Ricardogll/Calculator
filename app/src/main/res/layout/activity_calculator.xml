@@ -67,6 +67,7 @@
                 android:id="@+id/btn_plus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onClickOperator"
                 android:text="+"
                 android:textSize="40sp" />
         </TableRow>
@@ -103,6 +104,7 @@
                 android:id="@+id/btn_minus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onClickOperator"
                 android:text="-"
                 android:textSize="40sp" />
         </TableRow>
@@ -139,6 +141,7 @@
                 android:id="@+id/btn_multiply"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onClickOperator"
                 android:text="*"
                 android:textSize="40sp" />
         </TableRow>
@@ -166,13 +169,15 @@
                 android:id="@+id/btn_equal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onClickEqual"
                 android:text="="
                 android:textSize="40sp" />
 
             <Button
-                android:id="@+id/butbtn_divide"
+                android:id="@+id/btn_divide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="onClickOperator"
                 android:text="/"
                 android:textSize="40sp" />
         </TableRow>

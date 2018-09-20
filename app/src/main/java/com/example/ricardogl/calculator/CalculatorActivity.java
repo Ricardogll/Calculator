@@ -12,6 +12,7 @@ public class CalculatorActivity extends AppCompatActivity {
     private TextView num_view;
     private float last_num;
     private String last_operator="";
+    private float num_to_operate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +41,53 @@ public class CalculatorActivity extends AppCompatActivity {
         switch (b.getId()) {
             case R.id.btn_plus:
                 last_operator="+";
+                num_to_operate=last_num;
+                break;
+            case R.id.btn_minus:
+                last_operator="-";
+                num_to_operate=last_num;
+                break;
+            case R.id.btn_multiply:
+                last_operator="/";
+                num_to_operate=last_num;
+                break;
+            case R.id.btn_divide:
+                last_operator="*";
+                num_to_operate=last_num;
                 break;
         }
         num_view.setText("");
+        num="";
     }
 
     public void onClickEqual(View view){
+        float aux;
 
-
+        switch(last_operator) {
+            case "+":
+                aux=num_to_operate+last_num;
+                num=Float.toString(aux);
+                num_view.setText(num);
+                last_num=aux;
+                break;
+            case "-":
+                aux=num_to_operate-last_num;
+                num=Float.toString(aux);
+                num_view.setText(num);
+                last_num=aux;
+                break;
+            case "*":
+                aux=num_to_operate*last_num;
+                num=Float.toString(aux);
+                num_view.setText(num);
+                last_num=aux;
+                break;
+            case "/":
+                aux=num_to_operate/last_num;
+                num=Float.toString(aux);
+                num_view.setText(num);
+                last_num=aux;
+                break;
+        }
     }
 }

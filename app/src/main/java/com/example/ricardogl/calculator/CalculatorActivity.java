@@ -48,11 +48,11 @@ public class CalculatorActivity extends AppCompatActivity {
                 num_to_operate=last_num;
                 break;
             case R.id.btn_multiply:
-                last_operator="/";
+                last_operator="*";
                 num_to_operate=last_num;
                 break;
             case R.id.btn_divide:
-                last_operator="*";
+                last_operator="/";
                 num_to_operate=last_num;
                 break;
         }

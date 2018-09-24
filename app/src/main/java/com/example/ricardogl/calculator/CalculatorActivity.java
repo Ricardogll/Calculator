@@ -60,6 +60,15 @@ public class CalculatorActivity extends AppCompatActivity {
         num="";
     }
 
+    public void onClickDot(View view) {
+
+
+        Button b = (Button) view;
+
+        num += b.getText().toString().charAt(0);
+        num_view.setText(num);
+
+    }
     public void onClickEqual(View view){
         float aux;
 
